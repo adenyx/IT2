@@ -24,7 +24,7 @@ def power(a, b, c):
     y = a
     while b > 0:
         if b % 2 == 0:
-            x = (x * y) % c;
+            x = (x * y) % c
         y = (y * y) % c
         b = int(b / 2)
     return x % c
@@ -63,10 +63,10 @@ def main():
     key = genKey(q)
     h = power(g, key, q)  # h - g^a
     encrypted_message, p = encrypt(message, q, h, g)
-    print("Encrypted Message:", encrypted_message)
+    print("Encrypted Message: ", encrypted_message)
     decrypted_message = decrypt(encrypted_message, p, key, q)
     final_message = ''.join(decrypted_message)
-    print("Decrypted Message :", final_message)
+    print("Decrypted Message: ", final_message)
 
 
 main()
