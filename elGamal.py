@@ -1,8 +1,6 @@
 from math import pow
 import random
 
-a = random.randint(2, 10)
-
 
 def genKeyNumber(a, b):
     if a < b:
